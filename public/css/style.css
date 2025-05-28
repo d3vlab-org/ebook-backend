@@ -84,8 +84,9 @@ a:hover {
 }
 
 .section-dark {
-    background-color: #1e2d2e;
-    color: #f1f1f1;
+  background-color: #1e2d2e;
+  color: #f1f1f1;
+  padding: 30px 20px;
 }
 
 .section-dark h2 {
@@ -173,4 +174,27 @@ footer a {
         width: 90%;
         margin-bottom: 10px;
     }
+}
+
+.topbar {
+  background-color: #1e2d2e;
+  padding: 10px 0;
+  color: #f1f1f1;
+}
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.brand-name {
+  font-weight: 600;
+  font-size: 1.2em;
 }
