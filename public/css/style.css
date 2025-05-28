@@ -198,3 +198,9 @@ footer a {
   font-weight: 600;
   font-size: 1.2em;
 }
+
+.identity .name {
+  font-size: 1.8em;
+  margin: 0;
+  color: #8fd3c5;
+}
