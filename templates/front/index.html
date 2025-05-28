@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Back to the game - Powrót do programowania w PHP</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+  <script src="{{ asset('js/newsletter.js') }}"></script>
   <link rel="icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -12,7 +13,7 @@
   <header class="hero">
     <div class="container">
       <div class="hero-content">
-        <img src="cover.png" alt="Okładka książki Back to the game" class="book-cover">
+        <img src="{{ asset('cover.png') }}" alt="Okładka książki Back to the game" class="book-cover">
         <div>
           <h1>Back to the game</h1>
           <p class="subtitle">Twój kompleksowy przewodnik po powrocie do zawodu programisty PHP po przerwie.</p>
@@ -134,33 +135,8 @@
           <button type="submit" class="cta-button">Zapisz mnie!</button>
           <p id="form-message" class="form-message"></p>
         </form>
-        
-        <script>
-          document.getElementById("newsletter-form").addEventListener("submit", function(e) {
-            e.preventDefault();
-            const email = document.getElementById("email").value;
-            
-            fetch("https://ebook-php-comeback-production.up.railway.app/subscribe", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json"
-              },
-              body: JSON.stringify({ email })
-            })
-            .then(response => {
-              if (!response.ok) throw new Error("Błąd zapisu.");
-              return response.json();
-            })
-            .then(data => {
-              document.getElementById("form-message").textContent = "✅ Dziękujemy za zapis!";
-              document.getElementById("email").value = "";
-            })
-            .catch(error => {
-              document.getElementById("form-message").textContent = "❌ Coś poszło nie tak.";
-              console.error(error);
-            });
-          });
-        </script>
+        <p class="note">
+          Nie martw się, nie będziemy spamować. Obiecujemy wysłać tylko najważniejsze informacje o premierze i zniżkach.
       </div>
     </section>
   </main>
