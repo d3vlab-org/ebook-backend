@@ -24,23 +24,6 @@ class NewsletterController extends AbstractController
         UrlGeneratorInterface $urlGenerator
     ): JsonResponse {
 
-
-        $origin = $request->headers->get('Origin');
-
-    // Można to logować, zwracać, albo warunkowo używać
-    // przykład:
-    if ($origin) {
-        file_put_contents('/tmp/origin.log', $origin . PHP_EOL, FILE_APPEND);
-    }
-
-    // odpowiedź testowa
-    $response = new JsonResponse(['origin' => $origin]);
-    $response->headers->set('Access-Control-Allow-Origin', $origin);
-    $response->headers->set('Access-Control-Allow-Methods', 'POST, OPTIONS');
-    $response->headers->set('Access-Control-Allow-Headers', 'Content-Type');
-
-    return $response;
-    
         $data = json_decode($request->getContent(), true);
         $email = $data['email'] ?? null;
         $name = $data['name'] ?? null;
