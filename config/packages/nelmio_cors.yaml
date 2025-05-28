@@ -1,10 +1,12 @@
 nelmio_cors:
   defaults:
     allow_origin: ['https://book.d3v.eu', 'http://localhost:8787']
-    allow_credentials: false
-    allow_headers: ['Content-Type']
     allow_methods: ['POST', 'GET', 'OPTIONS']
+    allow_headers: ['Content-Type']
     max_age: 3600
   paths:
-    '^/':
-      origin_regex: false
+    '^/': # lub '^/subscribe$' jeśli chcesz tylko dla tej ścieżki
+    allow_origin: ['https://book.d3v.eu', 'http://localhost:8787']
+    allow_methods: ['POST', 'GET', 'OPTIONS']
+    allow_headers: ['Content-Type']
+    max_age: 3600
