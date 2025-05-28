@@ -44,7 +44,7 @@ class NewsletterController extends AbstractController
             ->from('newsletter@d3vlab.org')
             ->to($subscriber->getEmail())
             ->subject('Potwierdź subskrypcję')
-            ->htmlTemplate('emails/newsletter_confirmation_email.html.twig')
+            ->htmlTemplate('emails/confirm_subscription.html.twig')
             ->context([
                 'url' => $this->generateUrl(
                     'confirm_subscription',
