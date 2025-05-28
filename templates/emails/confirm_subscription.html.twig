@@ -1,4 +1,27 @@
-<h2>Dziękujemy za zapis na newsletter!</h2>
-<p>Aby potwierdzić swój adres e-mail, kliknij poniższy link:</p>
-<p><a href="{{ url }}">Potwierdź subskrypcję</a></p>
-<p>Pozdrawiamy,<br>Zespół book.d3vlab.org</p>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Potwierdzenie zapisu</title>
+</head>
+<body style="font-family: 'Inter', sans-serif; background-color: #f9f9f9; margin: 0; padding: 0; color: #333;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 40px; border-radius: 6px;">
+    <tr>
+      <td style="text-align: center;">
+        <h1 style="color: #2c3e50; font-size: 28px; margin-bottom: 10px;">Dziękujemy za zapis!</h1>
+        <p style="font-size: 16px; margin-bottom: 20px;">Cieszymy się, że chcesz być na bieżąco z naszym eBookiem „Back in the Game”.</p>
+        <p style="font-size: 16px; margin-bottom: 30px;">Kliknij poniższy przycisk, aby potwierdzić swój adres e-mail:</p>
+        <a href="{{ url }}" style="display: inline-block; background-color: #e74c3c; color: #fff; padding: 14px 28px; text-decoration: none; border-radius: 4px; font-size: 16px;">Potwierdź zapis</a>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding-top: 30px; font-size: 14px; color: #777; text-align: center;">
+        Jeśli nie zapisywałeś się do newslettera, możesz zignorować tę wiadomość.
+      </td>
+    </tr>
+  </table>
+  <footer style="text-align: center; font-size: 13px; color: #aaa; padding: 20px 0;">
+    &copy; {{ "now"|date("Y") }} D3V Lab | <a href="https://book.d3v.eu" style="color: #3498db;">book.d3v.eu</a>
+  </footer>
+</body>
+</html>

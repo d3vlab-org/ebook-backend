@@ -11,8 +11,8 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Mailer\MailerInterface;
-use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
+use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 
 class NewsletterController extends AbstractController
 {
@@ -38,15 +38,20 @@ class NewsletterController extends AbstractController
         $em->persist($subscriber);
         $em->flush();
 
-        $email = (new Email())
+
+
+        $email = (new TemplatedEmail())
             ->from('newsletter@d3vlab.org')
             ->to($subscriber->getEmail())
             ->subject('Potwierdź subskrypcję')
-            ->html(sprintf(
-                'Kliknij, aby potwierdzić: <a href="%s">%s</a>',
-                $this->generateUrl('confirm_subscription', ['token' => $subscriber->getToken()], UrlGeneratorInterface::ABSOLUTE_URL),
-                'Potwierdź subskrypcję'
-        ));
+            ->htmlTemplate('emails/newsletter_confirmation_email.html.twig')
+            ->context([
+                'url' => $this->generateUrl(
+                    'confirm_subscription',
+                    ['token' => $subscriber->getToken()],
+                    UrlGeneratorInterface::ABSOLUTE_URL
+                )
+            ]);
 
         $mailer->send($email);
         return $this->json(['message' => 'Dziękujemy za zapis! Sprawdź skrzynkę e-mail i potwierdź subskrypcję.']);
