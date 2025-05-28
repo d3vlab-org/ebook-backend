@@ -73,3 +73,59 @@ footer {
   width: 240px;
   margin: 0 auto 20px auto;
 }
+
+.book-landing .hero {
+  background-color: #34495e; /* przywróć ciemne tło */
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.book-landing .hero h1,
+.book-landing .hero p {
+  color: #fff;
+}
+
+.book-landing .cta-button {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.book-landing .cta-button:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+.section-dark {
+  background-color: #1e2d2e;
+  color: #f1f1f1;
+}
+
+.section-dark a {
+  color: #8fd3c5;
+}
+
+.section-dark h2 {
+  border-bottom: 2px solid #8fd3c5;
+}
+
+a.cta-button,
+a.cta-button:visited {
+  background-color: #1e2d2e;
+  color: #fff;
+}
+
+a.cta-button:hover {
+  background-color: #162122;
+}
+
+.name {
+  font-size: 2.8em;
+  color: #1e2d2e; /* ciemnozielony */
+}
