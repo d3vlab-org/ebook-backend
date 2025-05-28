@@ -1,27 +1,8 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Back to the game - Powrót do programowania w PHP</title>
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-  <script src="{{ asset('js/newsletter.js') }}"></script>
-  <link rel="icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <img src="{{ asset('cover.png') }}" alt="Okładka książki Back to the game" class="book-cover">
-        <div>
-          <h1>Back to the game</h1>
-          <p class="subtitle">Twój kompleksowy przewodnik po powrocie do zawodu programisty PHP po przerwie.</p>
-          <a href="#o-ksiazce" class="cta-button">Dowiedz się więcej</a>
-        </div>
-      </div>
-    </div>
-  </header>
+{% extends 'base.html.twig' %}
+
+{% block title %}Back to the game - Powrót do programowania w PHP% endblock %}
+
+{% block content %}
   
   <main>
     <section id="o-ksiazce" class="section">
@@ -141,11 +122,4 @@
     </section>
   </main>
   
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 [Jakub Drabek @ d3vlab.org]. Wszelkie prawa zastrzeżone.</p>
-    </div>
-  </footer>
-  
-</body>
-</html>
+{% endblock %}

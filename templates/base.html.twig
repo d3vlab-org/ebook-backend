@@ -1,17 +1,45 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Back to the game - Powrót do programowania w PHP{% endblock %}</title>
+  
+  {% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  {% endblock %}
+  
+  <link rel="icon" href="{{ asset('favicon.ico') }}">
+</head>
+<body>
 
-        {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+  {% block body %}
+    <header class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <img src="{{ asset('cover.png') }}" alt="Okładka książki Back to the game" class="book-cover">
+          <div>
+            <h1>Back to the game</h1>
+            <p class="subtitle">Twój kompleksowy przewodnik po powrocie do zawodu programisty PHP po przerwie.</p>
+            <a href="#o-ksiazce" class="cta-button">Dowiedz się więcej</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 [Jakub Drabek @ d3vlab.org]. Wszelkie prawa zastrzeżone.</p>
+      </div>
+    </footer>
+  {% endblock %}
+
+  {% block javascripts %}
+    <script src="{{ asset('js/newsletter.js') }}"></script>
+  {% endblock %}
+
+</body>
 </html>

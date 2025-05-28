@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Potwierdzenie zapisu do newslettera{% endblock %}
+
+{% block content %}
+<section class="section section-cta">
+  <div class="container">
+    <h2>Dziękujemy za potwierdzenie!</h2>
+    <p>Twój adres e-mail został pomyślnie zapisany do newslettera. Czekaj na pierwsze wieści o premierze książki i bonusy tylko dla zapisanych!</p>
+    <a href="{{ path('homepage') }}" class="cta-button">Wróć na stronę główną</a>
+  </div>
+</section>
+{% endblock %}

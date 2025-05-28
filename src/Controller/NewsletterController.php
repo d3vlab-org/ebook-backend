@@ -70,6 +70,6 @@ class NewsletterController extends AbstractController
         $subscriber->setConfirmed(true);
         $em->flush();
 
-        return new Response('<h1>Dziękujemy za potwierdzenie subskrypcji!</h1>');
+        return $this->render('front/confirmed.html.twig');
     }
 }
