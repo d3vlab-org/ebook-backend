@@ -39,7 +39,7 @@ class NewsletterController extends AbstractController
         $em->flush();
 
         $email = (new Email())
-            ->from('newsletter@d3vlab.eu')
+            ->from('newsletter@d3vlab.org')
             ->to($subscriber->getEmail())
             ->subject('Potwierdź subskrypcję')
             ->html(sprintf(
