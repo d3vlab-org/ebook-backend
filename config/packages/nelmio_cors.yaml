@@ -1,12 +1,15 @@
 nelmio_cors:
   defaults:
-    allow_origin: ['%env(regex:CORS_ALLOW_ORIGIN)%']
+    allow_origin: ['https://book.d3v.eu']
     allow_methods: ['GET', 'POST', 'OPTIONS']
     allow_headers: ['Content-Type']
+    expose_headers: ['Content-Type']
     max_age: 3600
+    hosts: []
   paths:
     '^/':
-      allow_origin: ['%env(regex:CORS_ALLOW_ORIGIN)%']
+      allow_origin: ['https://book.d3v.eu']
       allow_methods: ['GET', 'POST', 'OPTIONS']
       allow_headers: ['Content-Type']
+      expose_headers: ['Content-Type']
       max_age: 3600
