@@ -13,8 +13,8 @@ WORKDIR /app
 COPY . .
 
 # Instalacja zależności PHP
-RUN composer install --no-interaction --prefer-dist --optimize-autoloader
-
+ENV SYMFONY_SKIP_ENV_CHECK=1
+RUN composer install --no-scripts --no-interaction --prefer-dist
 # Eksponuj port dla Railway
 EXPOSE 8000
 
