@@ -55,3 +55,21 @@ footer {
   margin-top: 20px;
   padding: 16px 0;
 }
+
+.book-landing .container {
+  max-width: 1000px; /* lub większy */
+}
+
+.book-landing .hero {
+  padding: 60px 0;
+}
+
+.book-landing .hero-content {
+  flex-direction: column;
+  text-align: center;
+}
+
+.book-landing .book-cover {
+  width: 240px;
+  margin: 0 auto 20px auto;
+}
