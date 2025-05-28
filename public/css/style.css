@@ -1,137 +1,176 @@
+/* ======== Podstawowe ======== */
 body {
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  color: #333;
-  background-color: #f9f9f9;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
 }
 
 .container {
-  width: 90%;
-  max-width: 800px; /* zawężone z 960px */
-  margin: 0 auto;
-  padding: 16px;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px;
 }
 
-.section {
-  padding: 30px 0; /* zmniejszone z 40px */
-}
-
+/* ======== Nagłówki ======== */
 h1 {
-  font-size: 2.4em; /* zmniejszone z 2.8em */
-  margin-bottom: 8px;
+    font-size: 2.6em;
+    margin-bottom: 10px;
+    color: #1e2d2e;
+    border-bottom: 4px solid #1e2d2e;
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
 h2 {
-  font-size: 1.6em; /* było 2em */
-  margin-bottom: 16px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid #3498db;
+    font-size: 1.6em;
+    margin-top: 40px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+    color: #1e2d2e;
 }
 
 p {
-  margin-bottom: 12px;
+    margin-bottom: 12px;
 }
 
 ul {
-  margin-left: 20px;
-  margin-bottom: 12px;
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 12px;
 }
 
 li {
-  margin-bottom: 6px;
+    margin-bottom: 6px;
 }
 
-.hero {
-  padding: 40px 0; /* było 60px */
+a {
+    color: #5b42f3;
+    text-decoration: none;
 }
 
-.hero h1 {
-  font-size: 2.4em; /* było 3.5em na dużych ekranach */
+a:hover {
+    text-decoration: underline;
 }
 
-footer {
-  margin-top: 20px;
-  padding: 16px 0;
+.cta-button {
+    display: inline-block;
+    background-color: #1e2d2e;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
 }
 
-.book-landing .container {
-  max-width: 1000px; /* lub większy */
+.cta-button:hover {
+    background-color: #162122;
+    transform: translateY(-2px);
 }
 
-.book-landing .hero {
-  padding: 60px 0;
+/* ======== Sekcje ======== */
+.section {
+    padding: 30px 0;
 }
 
-.book-landing .hero-content {
-  flex-direction: column;
-  text-align: center;
-}
-
-.book-landing .book-cover {
-  width: 240px;
-  margin: 0 auto 20px auto;
-}
-
-.book-landing .hero {
-  background-color: #34495e; /* przywróć ciemne tło */
-  color: #fff;
-  padding: 60px 0;
-  text-align: center;
-}
-
-.book-landing .hero h1,
-.book-landing .hero p {
-  color: #fff;
-}
-
-.book-landing .cta-button {
-  background-color: #e74c3c;
-  color: #fff;
-  padding: 12px 25px;
-  border-radius: 5px;
-  font-size: 1.1em;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 20px;
-}
-
-.book-landing .cta-button:hover {
-  background-color: #c0392b;
-  transform: translateY(-2px);
+.section-light {
+    background-color: #fff;
 }
 
 .section-dark {
-  background-color: #1e2d2e;
-  color: #f1f1f1;
-}
-
-.section-dark a {
-  color: #8fd3c5;
+    background-color: #1e2d2e;
+    color: #f1f1f1;
 }
 
 .section-dark h2 {
-  border-bottom: 2px solid #8fd3c5;
+    border-color: #8fd3c5;
+    color: #fff;
 }
 
-a.cta-button,
-a.cta-button:visited {
-  background-color: #1e2d2e;
-  color: #fff;
+.section-dark a {
+    color: #8fd3c5;
 }
 
-a.cta-button:hover {
-  background-color: #162122;
+/* ======== Hero ======== */
+.hero {
+    background-color: #34495e;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
 }
 
-.name {
-  font-size: 2.8em;
-  color: #1e2d2e; /* ciemnozielony */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
 }
 
-.header-bar {
-  height: 4px;
-  background-color: #1e2d2e;
-  margin-bottom: 30px;
+.hero .book-cover {
+    width: 240px;
+    height: auto;
+    margin-bottom: 20px;
+    border: 5px solid #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.hero h1 {
+    color: #fff;
+    font-size: 2.8em;
+    margin: 0;
+}
+
+.hero .subtitle {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #ecf0f1;
+}
+
+/* ======== Stopka ======== */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #3498db;
+}
+
+/* ======== Responsywność ======== */
+@media (min-width: 768px) {
+    .hero-content {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .hero .book-cover {
+        width: 260px;
+        margin-right: 30px;
+        margin-bottom: 0;
+    }
+
+    .hero h1 {
+        font-size: 3.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input[type="email"] {
+        width: 90%;
+        margin-bottom: 10px;
+    }
 }
