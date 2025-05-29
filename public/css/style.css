@@ -204,3 +204,61 @@ footer a {
   margin: 0;
   color: #8fd3c5;
 }
+
+.section-cta {
+  background-color: #f5f7f9;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.section-cta h2 {
+  font-size: 2em;
+  color: #1e2d2e;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #3498db;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.newsletter-form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 12px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 280px;
+}
+
+.newsletter-form button.cta-button {
+  padding: 12px 20px;
+  font-size: 1em;
+  border: none;
+  background-color: #1e2d2e;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.newsletter-form button.cta-button:hover {
+  background-color: #283c3c;
+}
+
+.small-print {
+  font-size: 0.9em;
+  color: #777;
+  margin-top: 15px;
+}
+
+.form-message {
+  margin-top: 15px;
+  font-weight: 500;
+}
